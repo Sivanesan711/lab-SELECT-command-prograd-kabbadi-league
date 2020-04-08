@@ -3,15 +3,39 @@
 
 -- 1. **Write a query to display the team details. Display the records sorted in the order of team name.**
 
+              select * from team
+              order by name;
+
 -- 2. **Write a query to display the player details whose name starts with a letter `S` and who do not belong to the country 'South Africa'. Display the records sorted in descending order based on player name.**
+
+              select * from player;
+
+              select * from player where name like 's%' and not country = 'south africa' order by name desc;
 
 -- 3. **Write a query to display the event number and the seconds taken for each event. Display the records sorted in ascending order based on event number.**
 
+              select * from event;
+
+              select event_no,clock_in_seconds from event order by event_no ASC;
+
 -- 4. **Write a query to display the event numbers of those events which has sum of raid points and defending points greater than or equal to 3. Display the records sorted in ascending order based on event_no.**
+
+              select * from event ;
+
+              select event_no from event where raid_points >=3 and defending_points >= 3 order by event_no asc;
+
 
 -- 5. **Write a query to display the name of all the players who belong to the country India or Iran. Display the records sorted in ascending order based on player name.**
 
+              select * from player;
+
+              select name from player where country in ('india','iran') order by name asc;
+
+
 -- 6. **Write a query to display the name of all the players who does not belong to the country India and Iran. Display the records sorted in ascending order based on player name.**
+
+              select name from player where country not in ('india','iran') order by name asc;
+
 
 -- 7. **Write a query to display the names of all the skills that start with `Defend`. Display the records sorted in ascending order based on skill name.**
 
